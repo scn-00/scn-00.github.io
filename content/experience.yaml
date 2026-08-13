@@ -1,0 +1,10 @@
+# ------------------------------------------------------------------
+# Experience / internships. `role` and `summary` are optional —
+# empty fields are simply not rendered.
+# ------------------------------------------------------------------
+
+experience:
+  - company: Alibaba Group — ATH MaaS
+    role: Intern
+    period: 2025.12 – 2026.7
+    summary: ""

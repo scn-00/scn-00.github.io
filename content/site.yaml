@@ -1,0 +1,40 @@
+# ------------------------------------------------------------------
+# Site-wide profile settings. Edit this file and rebuild to update.
+# ------------------------------------------------------------------
+
+# Basic identity
+name: Chunnan Shang
+role: PhD Student
+photo: /assets/me.jpg
+
+# Short intro shown right under the name (one line)
+tagline: Style Transfer · Generative Models · AIGC
+
+# Long bio shown in the hero section. Use | for multi-line text.
+bio: |
+  I am a final-year PhD student at the College of Computer Science and
+  Technology, Zhejiang University, where I work on style transfer and
+  generative models. I am currently seeking new internship opportunities
+  related to AIGC (AI-generated content) generation.
+
+# Navigation shown in the top bar (labels + anchor hrefs)
+nav:
+  - label: Publications
+    href: "#publications"
+  - label: Education
+    href: "#education"
+  - label: Experience
+    href: "#experience"
+
+# Contact / profile links shown next to the photo.
+# `icon` refers to a file inside public/logos/ (svg or png).
+links:
+  - label: GitHub
+    url: https://github.com/scn-00
+    icon: github.svg
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=UVOG7D8AAAAJ&hl=en&oi=ao
+    icon: googlescholar.svg
+  - label: Email
+    url: mailto:chunnan.22@intl.zju.edu.cn
+    icon: mail.svg

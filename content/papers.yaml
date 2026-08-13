@@ -1,0 +1,40 @@
+# ------------------------------------------------------------------
+# Publications. Add / remove entries freely — the page renders the
+# full list automatically. Authors matching the site name (see
+# site.yaml) are highlighted in bold.
+#
+# Each entry supports:
+#   title    — paper title
+#   authors  — list of author names (order matters)
+#   venue    — conference / journal name
+#   badge    — optional pill label next to the venue (e.g. "Highlight")
+#   links    — optional map of label -> url, rendered as small buttons
+# ------------------------------------------------------------------
+
+papers:
+  - title: >-
+      SCSA: A Plug-and-Play Semantic Continuous-Sparse Attention for
+      Arbitrary Semantic Style Transfer
+    authors:
+      - Chunnan Shang
+      - Zhizhong Wang
+      - Hongwei Wang
+      - Xiangming Meng
+    venue: CVPR 2025
+    badge: Highlight
+    links:
+      Paper: https://arxiv.org/abs/2503.04119
+      Code: https://github.com/scn-00/SCSA
+
+  - title: >-
+      DICT: Data Injection and Contrastive Trajectory Refinement for
+      Conditional Image Generation with Diffusion Models
+    authors:
+      - Chunnan Shang
+      - Xin Zhang
+      - Zhizhong Wang
+      - Hongwei Wang
+    venue: ECCV 2026
+    links:
+      Paper: https://arxiv.org/abs/2607.03899
+      Code: https://github.com/scn-00/DICT

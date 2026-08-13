@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------
+# Education. Chronological list — newest first is recommended.
+# `note` is optional and shown under the school name.
+# ------------------------------------------------------------------
+
+education:
+  - degree: PhD Student
+    school: College of Computer Science and Technology, Zhejiang University
+    period: 2024 – Present
+    note: Style transfer and generative models
+
+  - degree: MS Student
+    school: ZJU-UIUC Institute, Zhejiang University
+    period: 2022 – 2024
+    note: Zhejiang University – University of Illinois Urbana-Champaign Institute
+
+  - degree: Undergraduate Student
+    school: School of Economic Information and Engineering, Southwest University of Finance and Economics
+    period: 2018 – 2022
+    note: ""
