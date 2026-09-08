@@ -103,10 +103,12 @@ const renderHero = () => `
 const renderPublications = () => {
   const items = papers.papers
     .map((p) => {
-      const links = Object.entries(p.links ?? {})
+      const links = (p.links ?? [])
         .map(
-          ([label, url]) =>
-            `<a class="paper-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`,
+          (l) => `
+            <a class="paper-icon" href="${escapeHtml(l.url)}" target="_blank" rel="noopener" title="${escapeHtml(l.label ?? '')}" aria-label="${escapeHtml(l.label ?? '')}">
+              <img src="${logo(l.icon)}" alt="${escapeHtml(l.label ?? '')}" width="18" height="18" />
+            </a>`,
         )
         .join('')
       const badge = p.badge

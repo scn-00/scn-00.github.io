@@ -61,9 +61,13 @@ Append to `content/papers.yaml`. Supported fields:
   authors: [Author A, Chunnan Shang, Author B]   # site owner auto-bolded
   venue: CVPR 2026
   badge: Highlight          # optional pill next to venue; omit for none
-  links:                    # optional map, rendered as pill buttons
-    Paper: https://arxiv.org/abs/xxxx
-    Code: https://github.com/user/repo
+  links:                    # optional list of { label, url, icon } icon links
+    - label: arXiv
+      url: https://arxiv.org/abs/xxxx
+      icon: arxiv.svg        # must exist in public/logos/
+    - label: GitHub
+      url: https://github.com/user/repo
+      icon: github.svg
 ```
 
 Author bolding is automatic: any author string equal to `site.name` is wrapped
@@ -100,9 +104,9 @@ Sections are one render function each. To add e.g. "Awards":
 
 ## Pitfalls & conventions
 
-- **`links` in papers.yaml is an object (map), not a list.** Render with
-  `Object.entries(p.links ?? {})`, not `.map()` on the value. (A previous bug
-  shipped because of this.)
+- **`links` in papers.yaml is a list of objects (`{ label, url, icon }`), not a
+  map.** Render with `.map()` over the list; `icon` resolves via the `logo()`
+  helper like hero links. (A previous bug shipped when this was a map.)
 - **Use the `yaml` npm package, not `js-yaml`.** js-yaml is CommonJS and breaks
   Vite 8's rolldown bundling ("Missing export").
 - **`base: './'` in vite.config.js is intentional** — it lets the built site run

@@ -8,7 +8,8 @@
 #   authors  — list of author names (order matters)
 #   venue    — conference / journal name
 #   badge    — optional pill label next to the venue (e.g. "Highlight")
-#   links    — optional map of label -> url, rendered as small buttons
+#   links    — optional list of { label, url, icon }; each item renders as
+#              an icon hyperlink on the right (icon = file in public/logos/)
 # ------------------------------------------------------------------
 
 papers:
@@ -23,8 +24,12 @@ papers:
     venue: CVPR 2025
     badge: Highlight
     links:
-      Paper: https://arxiv.org/abs/2503.04119
-      Code: https://github.com/scn-00/SCSA
+      - label: arXiv
+        url: https://arxiv.org/abs/2503.04119
+        icon: arxiv.svg
+      - label: GitHub
+        url: https://github.com/scn-00/SCSA
+        icon: github.svg
 
   - title: >-
       DICT: Data Injection and Contrastive Trajectory Refinement for
@@ -36,5 +41,9 @@ papers:
       - Hongwei Wang
     venue: ECCV 2026
     links:
-      Paper: https://arxiv.org/abs/2607.03899
-      Code: https://github.com/scn-00/DICT
+      - label: arXiv
+        url: https://arxiv.org/abs/2607.03899
+        icon: arxiv.svg
+      - label: GitHub
+        url: https://github.com/scn-00/DICT
+        icon: github.svg
