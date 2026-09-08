@@ -162,7 +162,8 @@ links:
 #   authors  — list of author names (order matters)
 #   venue    — conference / journal name
 #   badge    — optional pill label next to the venue (e.g. "Highlight")
-#   links    — optional map of label -> url, rendered as small buttons
+#   links    — optional list of { label, url, icon }; each item renders as
+#              an icon hyperlink on the right (icon = file in public/logos/)
 # ------------------------------------------------------------------
 
 papers:
@@ -177,8 +178,12 @@ papers:
     venue: CVPR 2025
     badge: Highlight
     links:
-      Paper: https://arxiv.org/abs/2503.04119
-      Code: https://github.com/scn-00/SCSA
+      - label: arXiv
+        url: https://arxiv.org/abs/2503.04119
+        icon: arxiv.svg
+      - label: GitHub
+        url: https://github.com/scn-00/SCSA
+        icon: github.svg
 
   - title: >-
       DICT: Data Injection and Contrastive Trajectory Refinement for
@@ -190,8 +195,12 @@ papers:
       - Hongwei Wang
     venue: ECCV 2026
     links:
-      Paper: https://arxiv.org/abs/2607.03899
-      Code: https://github.com/scn-00/DICT
+      - label: arXiv
+        url: https://arxiv.org/abs/2607.03899
+        icon: arxiv.svg
+      - label: GitHub
+        url: https://github.com/scn-00/DICT
+        icon: github.svg
 `,_r=`# ------------------------------------------------------------------
 # Education. Chronological list — newest first is recommended.
 # \`note\` is optional and shown under the school name.
@@ -259,7 +268,10 @@ experience:
       </ul>
     </div>
   </header>
-`,(()=>{let e=yr.papers.map(e=>{let t=Object.entries(e.links??{}).map(([e,t])=>`<a class="paper-link" href="${$(t)}" target="_blank" rel="noopener">${$(e)}</a>`).join(``),n=e.badge?`<span class="badge">${$(e.badge)}</span>`:``;return`
+`,(()=>{let e=yr.papers.map(e=>{let t=(e.links??[]).map(e=>`
+            <a class="paper-icon" href="${$(e.url)}" target="_blank" rel="noopener" title="${$(e.label??``)}" aria-label="${$(e.label??``)}">
+              <img src="${Dr(e.icon)}" alt="${$(e.label??``)}" width="18" height="18" />
+            </a>`).join(``),n=e.badge?`<span class="badge">${$(e.badge)}</span>`:``;return`
       <article class="paper">
         <div class="paper-main">
           <h3 class="paper-title">${$(e.title)}</h3>
