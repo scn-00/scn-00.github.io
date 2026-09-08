@@ -19,6 +19,7 @@ npm install     # install deps (vite, yaml)
 npm run dev     # dev server → http://localhost:5173
 npm run build   # production build → dist/
 npm run preview # serve the production build
+npm run deploy  # build + publish dist/ to the gh-pages branch
 ```
 
 ## Project structure
@@ -30,7 +31,7 @@ content/           ← ALL page content as YAML (the only files you edit for con
   papers.yaml      ← publications list
   education.yaml   ← education timeline
   experience.yaml  ← internship / experience timeline
-public/logos/      ← social icons (github.svg, googlescholar.svg, mail.svg)
+public/logos/      ← icon files for hero links & paper icon links (github, googlescholar, mail, arxiv, …)
 src/main.js        ← renders YAML → HTML (one render function per section)
 src/style.css      ← all styling (CSS custom properties for the theme)
 index.html         ← shell, fonts, meta
@@ -137,9 +138,11 @@ use `--virtual-time-budget` and check for runtime errors in the log.
 
 ## Deployment (GitHub Pages)
 
+The site is published from the `gh-pages` branch. A single command builds and
+publishes (requires `npm install` first):
+
 ```bash
-npm run build
-npx gh-pages -d dist
+npm run deploy   # = npm run build && gh-pages -d dist
 ```
 
 Repo Settings → Pages → deploy from `gh-pages` branch (or use the official
